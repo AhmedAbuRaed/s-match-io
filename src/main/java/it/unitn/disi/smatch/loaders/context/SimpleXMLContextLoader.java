@@ -88,9 +88,9 @@ public class SimpleXMLContextLoader extends BaseXMLContextLoader<IContext, INode
                 if (null != oracle) {
                     try {
                         if (-1 == atts.getIndex("pos")) {
-                                acol.getSenses().add(oracle.createSense(atts.getValue("id")));
+                                acol.getSenses().add(oracle.createSense(atts.getValue("id"), "en"));
                         } else {
-                                acol.getSenses().add(oracle.createSense(atts.getValue("pos") + "#" + atts.getValue("id")));
+                                acol.getSenses().add(oracle.createSense(atts.getValue("pos") + "#" + atts.getValue("id"), "en"));
                         }
                     } catch (LinguisticOracleException e) {
                         throw new RuntimeException(e.getMessage(), e);

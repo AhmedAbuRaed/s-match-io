@@ -122,7 +122,7 @@ public class CTXMLContextLoader extends BaseXMLContextLoader<IContext, INode> im
                         String[] senses = content.toString().trim().split(" ");
                         try {
                             for (String s : senses) {
-                                    sense.getSenses().add(oracle.createSense(s));
+                                    sense.getSenses().add(oracle.createSense(s, "en"));
                             }
                         } catch (LinguisticOracleException e) {
                             throw new RuntimeException(e.getMessage(), e);
